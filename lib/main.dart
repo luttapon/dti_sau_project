@@ -1,6 +1,7 @@
+import 'package:dti_sau_project/views/login_ui.dart';
+import 'package:dti_sau_project/views/signup_ui.dart';
 import 'package:dti_sau_project/views/welcome_ui.dart';
 import 'package:flutter/material.dart';
-
 
 void main() {
   runApp(
@@ -20,7 +21,7 @@ class _DtisauState extends State<Dtisau> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomeUI(),
+      home: SignupUI(),
     );
   }
 }

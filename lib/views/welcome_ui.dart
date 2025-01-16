@@ -1,3 +1,5 @@
+import 'package:dti_sau_project/views/login_ui.dart';
+import 'package:dti_sau_project/views/signup_ui.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeUI extends StatefulWidget {
@@ -51,7 +53,14 @@ class _WelcomeUIState extends State<WelcomeUI> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LoginUI(),
+                    ),
+                  );
+                },
                 child: Text(
                   "LOGIN",
                   style: TextStyle(
@@ -72,7 +81,14 @@ class _WelcomeUIState extends State<WelcomeUI> {
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => SignupUI(),
+                    ),
+                  );
+                },
                 child: Text(
                   "SIGNUP",
                   style: TextStyle(
