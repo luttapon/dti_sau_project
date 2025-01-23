@@ -14,102 +14,104 @@ class _WelcomeUIState extends State<WelcomeUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 230, 205, 16),
-      body: Center(
-          child: Column(
-        children: [
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.135,
-          ),
-          Image.asset(
-            'assets/images/logo.png',
-            width: MediaQuery.of(context).size.width * 0.8,
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.035,
-          ),
-          Text(
-            'DTI SAU APP 2025',
-            style: TextStyle(
-              fontSize: MediaQuery.of(context).size.width * 0.065,
-              fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        child: Center(
+            child: Column(
+          children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.135,
             ),
-          ),
-          Text(
-            'Southeast Asia University',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
+            Image.asset(
+              'assets/images/logo.png',
+              width: MediaQuery.of(context).size.width * 0.8,
             ),
-          ),
-          Text(
-            'Created by Tine DTI SAU',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.035,
             ),
-          ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.035,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              OutlinedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => LoginUI(),
-                    ),
-                  );
-                },
-                child: Text(
-                  "LOGIN",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),
-                ),
-                style: OutlinedButton.styleFrom(
-                  fixedSize: Size(
-                    MediaQuery.of(context).size.width * 0.3,
-                    MediaQuery.of(context).size.height * 0.05,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                ),
+            Text(
+              'DTI SAU APP 2025',
+              style: TextStyle(
+                fontSize: MediaQuery.of(context).size.width * 0.065,
+                fontWeight: FontWeight.bold,
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.03,
+            ),
+            Text(
+              'Southeast Asia University',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
               ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SignupUI(),
+            ),
+            Text(
+              'Created by Tine DTI SAU',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.035,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => LoginUI(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    "LOGIN",
+                    style: TextStyle(
+                      color: Colors.black,
                     ),
-                  );
-                },
-                child: Text(
-                  "SIGNUP",
-                  style: TextStyle(
-                    color: Colors.white,
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    fixedSize: Size(
+                      MediaQuery.of(context).size.width * 0.3,
+                      MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
                   ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  fixedSize: Size(
-                    MediaQuery.of(context).size.width * 0.3,
-                    MediaQuery.of(context).size.height * 0.05,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.03,
                 ),
-              )
-            ],
-          )
-        ],
-      )),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SignupUI(),
+                      ),
+                    );
+                  },
+                  child: Text(
+                    "SIGNUP",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
+                    fixedSize: Size(
+                      MediaQuery.of(context).size.width * 0.3,
+                      MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                  ),
+                )
+              ],
+            )
+          ],
+        )),
+      ),
     );
   }
 }
