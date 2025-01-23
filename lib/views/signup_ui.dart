@@ -1,3 +1,6 @@
+// ignore_for_file: sort_child_properties_last
+
+import 'package:dti_sau_project/views/login_ui.dart';
 import 'package:flutter/material.dart';
 
 class SignupUI extends StatefulWidget {
@@ -12,7 +15,7 @@ class _SignupUIState extends State<SignupUI> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 30),
+        padding: const EdgeInsets.only(left: 30.0, right: 30.0),
         child: Center(
           child: Column(
             children: [
@@ -22,23 +25,21 @@ class _SignupUIState extends State<SignupUI> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Icon(
-                  Icons.arrow_back_ios,
+                  Icons.arrow_back_ios_new,
                   size: MediaQuery.of(context).size.height * 0.05,
                 ),
               ),
               Align(
                 alignment: Alignment.centerLeft,
-                child: Image.asset(
-                  'assets/images/logo.png',
-                  width: MediaQuery.of(context).size.width * 0.40,
-                ),
+                child: Image.asset('assets/images/logo.png',
+                    height: MediaQuery.of(context).size.height * 0.2),
               ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Get On Board!',
+                  "Get On Board!",
                   style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width * 0.07,
+                    fontSize: MediaQuery.of(context).size.height * 0.035,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -46,9 +47,9 @@ class _SignupUIState extends State<SignupUI> {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'Create your profile to start your journey.',
+                  "Create your profile to start your Journey.",
                   style: TextStyle(
-                    fontSize: MediaQuery.of(context).size.width * 0.030,
+                    fontSize: MediaQuery.of(context).size.height * 0.02,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -59,8 +60,10 @@ class _SignupUIState extends State<SignupUI> {
               TextField(
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.person_2_outlined),
+                  enabledBorder: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(),
                   border: OutlineInputBorder(),
-                  hintText: 'Full Name',
+                  labelText: 'Full Name',
                 ),
               ),
               SizedBox(
@@ -68,9 +71,11 @@ class _SignupUIState extends State<SignupUI> {
               ),
               TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.email),
+                  prefixIcon: Icon(Icons.mail_outline),
+                  enabledBorder: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(),
                   border: OutlineInputBorder(),
-                  hintText: 'E-Mail',
+                  labelText: 'Email',
                 ),
               ),
               SizedBox(
@@ -78,9 +83,11 @@ class _SignupUIState extends State<SignupUI> {
               ),
               TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Icon(Icons.phone),
+                  prefixIcon: Icon(Icons.tag),
+                  enabledBorder: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(),
                   border: OutlineInputBorder(),
-                  hintText: 'Phone No',
+                  labelText: 'Phone Number',
                 ),
               ),
               SizedBox(
@@ -90,72 +97,85 @@ class _SignupUIState extends State<SignupUI> {
                 obscureText: true,
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.fingerprint),
+                  suffixIcon: Icon(Icons.visibility),
+                  enabledBorder: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(),
                   border: OutlineInputBorder(),
-                  hintText: 'password',
+                  labelText: 'Password',
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               ElevatedButton(
                 onPressed: () {},
                 child: Text(
-                  "SIGUP",
+                  "LOGIN",
                   style: TextStyle(
-                    color: Colors.white,
-                  ),
+                      fontWeight: FontWeight.bold, color: Colors.white),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.black,
-                  fixedSize: Size(
-                    MediaQuery.of(context).size.width * 1,
-                    MediaQuery.of(context).size.height * 0.05,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5.0),
+                    ),
+                    fixedSize: Size(MediaQuery.of(context).size.width,
+                        MediaQuery.of(context).size.height * 0.065),
+                    backgroundColor: Colors.black),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.01,
               ),
-              Text('OR'),
+              Text("OR"),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.03,
+                height: MediaQuery.of(context).size.height * 0.01,
               ),
               OutlinedButton(
-                  onPressed: () {},
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'assets/images/googlelogo.png',
-                          width: 20,
-                        ),
-                        Text('Sign-in with Google'),
-                      ]),
-                  style: OutlinedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(5)),
-                    fixedSize: Size(
-                      MediaQuery.of(context).size.width * 1,
-                      MediaQuery.of(context).size.height * 0.05,
+                onPressed: () {},
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(
+                      "assets/images/googlelogo.png",
+                      width: 20.0,
                     ),
-                  )),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.03,
+                    Text(
+                      " Sign-In with Google",
+                    )
+                  ],
+                ),
+                style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5.0),
+                  ),
+                  fixedSize: Size(MediaQuery.of(context).size.width,
+                      MediaQuery.of(context).size.height * 0.065),
+                ),
               ),
-              TextButton(
-                  onPressed: () {},
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Text('LOGIN')]),
-                  style: TextButton.styleFrom(
-                    fixedSize: Size(
-                      MediaQuery.of(context).size.width * 1,
-                      MediaQuery.of(context).size.height * 0.05,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Already have an Account?",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => LoginUI(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      "Sign In",
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 33, 83, 232),
+                          fontWeight: FontWeight.bold),
                     ),
-                  ))
+                  )
+                ],
+              )
             ],
           ),
         ),
